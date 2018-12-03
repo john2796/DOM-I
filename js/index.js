@@ -69,6 +69,9 @@ ctaText.textContent = siteContent["cta"]["h1"];
 
 let btn = document.querySelector('.cta .cta-text button');
 btn.textContent = siteContent['cta']['button']
+btn.addEventListener('click', () => {
+  alert('You Clicked !!!')
+})
 //cta image
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src'])
@@ -104,3 +107,4 @@ let footer = document.querySelector("footer");
 footer.textContent = siteContent["footer"]["copyright"];
 
 
+// events
