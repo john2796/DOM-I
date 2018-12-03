@@ -41,39 +41,28 @@ const siteContent = {
 // Example: Update the img src for the logo
 const container = document.querySelector('.container');
 const logo = document.getElementById("logo-img");
-const ctaImg = document.querySelector('#cta-img');
-const middleImg = document.querySelector('#middle-img');
 
-const nav = document.querySelector('nav');
 
 
 // images
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-ctaImg.setAttribute('src', siteContent['cta']['img-src'])
-middleImg.setAttribute('src', siteContent['main-content']['img-src'])
 
 // nav
-const service = document.createElement('a');
-const product = document.createElement('a');
-const vision = document.createElement('a');
-const features = document.createElement('a');
-const about = document.createElement('a');
-const contact = document.createElement('a');
-service.textContent = siteContent['nav']["nav-item-1"]
-product.textContent = siteContent['nav']["nav-item-2"]
-vision.textContent = siteContent['nav']["nav-item-3"]
-features.textContent = siteContent['nav']["nav-item-4"]
-about.textContent = siteContent['nav']["nav-item-5"]
-contact.textContent = siteContent['nav']["nav-item-6"]
+let navLinks = document.querySelectorAll('nav a');
+navLinks.forEach((link, i) => {
+  link.textContent = siteContent.nav[`nav-item-${i + 1}`];
+})
 
-nav.prepend(service, product, vision, features, about, contact);
-// const navItems = siteContent['nav'];
-// for (let key in navItems) {
-//   const element = navItems[key];
-//   let anchor = document.createElement('a');
-//   anchor.textContent = element;
-//   nav.append(anchor);
-// }
+// cta 
+const ctaText = document.querySelector(".cta-text h1");
+ctaText.textContent = siteContent["cta"]["h1"];
+//cta btn 
 
+let btn = document.querySelector('.cta .cta-text button');
+btn.textContent = siteContent['cta']['button']
+//cta image
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src'])
 
-
+const middleImg = document.querySelector('#middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['img-src'])
