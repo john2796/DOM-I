@@ -1,14 +1,72 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
+  width: 100%;
+  max-width: 880px;
+  margin: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .digit {
   display: inline-block;
-  font-size: 80px;
+  font-size: 15rem;
 }
 
-.redDigit {
-  color: red;
+
+#msHundreds {
+  color: rgb(171, 254, 48);
+}
+
+#msTens {
+  color: rgb(252, 17, 169);
+}
+
+#secondOnes {
+  color: rgb(170, 30, 252);
+}
+
+#secondTens {
+  color: rgb(252, 169, 39);
+}
+
+button {
+  border-radius: 10px;
+  background: white;
+  color: black;
+  border: solid 1px black;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  padding: 10px 10px;
+  width: 100px;
+  margin: 10px;
+  outline: none;
+}
+
+button:hover {
+  transition: all 0.5s ease-in-out;
+  background: rgb(171, 254, 48);
+  border: solid 1px rgb(171, 254, 48);
+  color: white;
+}
+
+@media (max-width: 500px) {
+  .digit {
+    font-size: 7.5rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.red {
+  color: rgb(251, 5, 26) !important;
 }
