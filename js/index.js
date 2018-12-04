@@ -41,8 +41,6 @@ const siteContent = {
 // Example: Update the img src for the logo
 const logo = document.getElementById("logo-img");
 
-
-
 // images
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -54,7 +52,6 @@ navLinks.forEach((link, i) => {
 })
 
 // append
-
 const nav = document.querySelector('nav');
 const home = document.createElement('a');
 home.textContent = 'Home';
@@ -105,6 +102,3 @@ for (let i = 0; i < contactp.length; i++) {
 
 let footer = document.querySelector("footer");
 footer.textContent = siteContent["footer"]["copyright"];
-
-
-// events

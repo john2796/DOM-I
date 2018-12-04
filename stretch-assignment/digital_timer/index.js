@@ -40,9 +40,8 @@ window.onload = function () {
     addSecondOnes.classList.remove("red");
     addSecondTens.classList.remove("red");
 
-
     clearInterval(Interval);
-    msTens = "-"; msHundreds = "-"; secondOnes = "-"; secondTens = "-";
+    msTens = "0"; msHundreds = "0"; secondOnes = "0"; secondTens = "0";
     addMsHundreds.textContent = `${msHundreds}`;
     addMsTens.textContent = `${msTens}`;
     addSecondOnes.textContent = `${secondOnes}`;
@@ -99,7 +98,7 @@ window.onload = function () {
       addMsTens.className += " red";
       addSecondOnes.className += " red";
       addSecondTens.className += " red";
-      return console.log("Finished! 🏁")
+      return console.log("done.")
     }
   }
 }
