@@ -79,7 +79,6 @@ window.onload = function () {
     if (secondOnes < 9) {
       addSecondOnes.textContent = `${secondOnes}`;
     }
-
     if (secondOnes > 9) {
       secondTens += 1;
       addSecondTens.textContent = `${secondTens}`;

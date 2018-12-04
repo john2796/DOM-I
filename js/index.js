@@ -58,17 +58,27 @@ home.textContent = 'Home';
 home.style.color = 'red';
 nav.prepend(home);
 
+// const elTag = document.createElement('br')
+// const title = []
+// const awesomeTitle = siteContent["cta"]["h1"].split(' ')[0];
+// title.push(awesomeTitle);
+// const br = `${elTag} Is Awesome`;
+// title.push(br);
+// //siteContent["cta"]["h1"];
 
-// cta 
-const ctaText = document.querySelector(".cta-text h1"); 1
-ctaText.textContent = siteContent["cta"]["h1"];
+const ctaText = document.querySelector(".cta-text h1");
+ctaText.textContent = siteContent["cta"]["h1"]
+ctaText.innerHTML = siteContent.cta.h1.split(' ').join('<br>');
+
 //cta btn 
+
 
 let btn = document.querySelector('.cta .cta-text button');
 btn.textContent = siteContent['cta']['button']
 btn.addEventListener('click', () => {
   alert('You Clicked !!!')
 })
+
 //cta image
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src'])
@@ -83,6 +93,7 @@ let mainContentArray = ["features", "about", "services", "product", "vision"];
 for (let i = 0; i < mainContentArray.length; i++) {
   h4[i].textContent = siteContent["main-content"][`${mainContentArray[i]}-h4`];
 }
+
 // p 
 let p = document.querySelectorAll(".main-content p");
 let paragraphArr = ["features", "about", "services", "product", "vision"];
